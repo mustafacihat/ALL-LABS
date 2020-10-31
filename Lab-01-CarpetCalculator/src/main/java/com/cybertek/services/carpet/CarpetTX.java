@@ -16,7 +16,7 @@ public class CarpetTX implements Carpet {
             UNIT_PRICES.put(City.AUSTIN, City.AUSTIN.getUnitPrice());
             UNIT_PRICES.put(City.SAN_ANTONIO, City.SAN_ANTONIO.getUnitPrice());
             if (!(city.equals(City.AUSTIN) || city.equals(City.DALLAS) || city.equals(City.SAN_ANTONIO))) {
-                throw new Exception("THE CITY IS ALREADY NOT DEFINED OR NOT DEFINED IN THIS STATE");
+                throw new Exception("THE CITY IS NOT DEFINED IN THIS STATE");
            } else {
                 return UNIT_PRICES.get(city);
             }

@@ -28,8 +28,17 @@ public class Lab01CarpetCalculatorApplication {
         Calculator calculator = container.getBean("calculator", Calculator.class);
         System.out.println("Pls enter the city name : ");
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println(calculator.calculatePrice(City.valueOf(sc.nextLine())));
+        while(true){
+        	try{
+				Scanner sc = new Scanner(System.in);
+				System.out.println("The price of carpet is : $" + calculator.calculatePrice(City.valueOf(sc.nextLine())));
+				System.out.println("Thanks for using CARPETCALCULATOR");
+				break;
+			}catch (Exception e){
+				System.out.println("!!!!!!!!!!City Problem!!!!!!!!!!");
+			}
+		}
+
     }
 
 }

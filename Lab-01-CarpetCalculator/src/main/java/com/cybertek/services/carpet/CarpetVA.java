@@ -15,7 +15,7 @@ public class CarpetVA implements Carpet {
             UNIT_PRICES.put(City.ARLINGTON, City.ARLINGTON.getUnitPrice());
             UNIT_PRICES.put(City.MCLEAN, City.MCLEAN.getUnitPrice());
             if (!(city.equals(City.FAIRFAX) || city.equals(City.ARLINGTON) || city.equals(City.MCLEAN))) {
-                throw new Exception("THE CITY IS ALREADY NOT DEFINED OR NOT DEFINED IN THIS STATE");
+                throw new Exception("THE CITY IS NOT DEFINED IN THIS STATE");
             } else {
                 return UNIT_PRICES.get(city);
             }
