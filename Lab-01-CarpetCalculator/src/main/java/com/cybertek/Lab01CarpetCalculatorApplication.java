@@ -16,20 +16,20 @@ import java.util.Scanner;
 public class Lab01CarpetCalculatorApplication {
 
 
-	@Bean
-	public Calculator calculator(@Qualifier("carpetVA") Carpet carpet, @Qualifier("livingRoom") Floor floor){
-		return new Calculator(carpet,floor);
-	}
+    @Bean
+    public Calculator calculator(@Qualifier("carpetTX") Carpet carpet, @Qualifier("livingRoom") Floor floor) {
+        return new Calculator(carpet, floor);
+    }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		ApplicationContext container = SpringApplication.run(Lab01CarpetCalculatorApplication.class, args);
+        ApplicationContext container = SpringApplication.run(Lab01CarpetCalculatorApplication.class, args);
 
-		Calculator calculator = container.getBean("calculator", Calculator.class);
-		System.out.println("Pls enter the city name : ");
+        Calculator calculator = container.getBean("calculator", Calculator.class);
+        System.out.println("Pls enter the city name : ");
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println(calculator.calculatePrice(City.valueOf(sc.nextLine())));
-	}
+        Scanner sc = new Scanner(System.in);
+        System.out.println(calculator.calculatePrice(City.valueOf(sc.nextLine())));
+    }
 
 }
